@@ -6,30 +6,52 @@
 </mat-toolbar>
 <mat-drawer-container class="fullsize">
   <mat-drawer color="primary" mode="side" opened class="sidebar">
-    <mat-list dense>
-      <mat-list-item><button mat-button>Buttons</button></mat-list-item>
-      <mat-list-item><button mat-button>Tables</button></mat-list-item>
-      <mat-list-item><button mat-button>Logo</button></mat-list-item>
-
-    </mat-list>
+    <mat-vertical-stepper [linear]="isLinear" #stepper>
+      <mat-step>
+        <ng-template matStepLabel>Buttons</ng-template>
+      </mat-step>
+      <mat-step>
+        <ng-template matStepLabel>Table</ng-template>
+      </mat-step>
+      <mat-step>
+        <ng-template matStepLabel>Logo</ng-template>
+      </mat-step>
+    </mat-vertical-stepper>
   </mat-drawer>
   <mat-drawer-content>
 
     <div class="container fullsize">
-        <div class="row halfsize">
-            <app-buttons></app-buttons>
-        </div>
+      <div class="row halfsize">
+        <app-buttons></app-buttons>
+      </div>
       <div class="row halfsize">
         <mat-card class="card-size fullsize">
-          <mat-card-header class="card-header">
-            <mat-card-title>/src/app/home/home.component.html</mat-card-title>
-          </mat-card-header>
-          <mat-card-content class="fullsize">
-            <object data="http://www.web-source.net" class="objsize">
-              <embed src="http://www.web-source.net" class="objsize">
-              Error: Embedded data could not be displayed.
-            </object>
-          </mat-card-content>
+          <mat-tab-group>
+            <mat-tab label="html">
+              <mat-card-content class="fullsize">
+                <object data="http://www.web-source.net" class="objsize">
+                  <embed src="http://www.web-source.net" class="objsize">
+                  Error: Embedded data could not be displayed.
+                </object>
+              </mat-card-content>
+            </mat-tab>
+            <mat-tab label="ts">
+              <mat-card-content class="fullsize">
+                <object data="http://www.web-source.net" class="objsize">
+                  <embed src="http://www.web-source.net" class="objsize">
+                  Error: Embedded data could not be displayed.
+                </object>
+              </mat-card-content>
+            </mat-tab>
+            <mat-tab label="css">
+              <mat-card-content class="fullsize">
+                <object data="http://www.web-source.net" class="objsize">
+                  <embed src="http://www.web-source.net" class="objsize">
+                  Error: Embedded data could not be displayed.
+                </object>
+              </mat-card-content>
+            </mat-tab>
+          </mat-tab-group>
         </mat-card>
       </div>
     </div>
