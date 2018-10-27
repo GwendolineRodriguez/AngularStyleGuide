@@ -3,8 +3,12 @@
     width: 20%;
 }
 
-.card-size {
+.marg-16 {
     margin: 16px;
+}
+
+.no-marg-top {
+    margin-top: 0;
 }
 .card-header {
     background-size: cover;
@@ -12,15 +16,13 @@
 
 .fullsize {
     height: 100%;
-    width: 100%;
 }
 
 .halfsize {
     height: 40%;
-    width: 94%;
 }
 
 .objsize {
     height: 90%;
-    width: 100%;  
+    width: 100%;
 }

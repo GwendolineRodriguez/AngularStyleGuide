@@ -8,31 +8,31 @@ import {
   MatListModule,
   MatIconModule,
   MatStepperModule,
-  MatTabsModule
+  MatTabsModule,
+  MatTableModule,
+  MatCheckboxModule
 } from '@angular/material';
+
+const modules = [
+  MatButtonModule,
+  MatSidenavModule,
+  MatToolbarModule,
+  MatCardModule,
+  MatGridListModule,
+  MatListModule,
+  MatIconModule,
+  MatStepperModule,
+  MatTabsModule,
+  MatTableModule,
+  MatCheckboxModule
+];
 
 @NgModule({
   imports: [
-    MatButtonModule,
-    MatSidenavModule,
-    MatToolbarModule,
-    MatCardModule,
-    MatGridListModule,
-    MatListModule,
-    MatIconModule,
-    MatStepperModule,
-    MatTabsModule
+    modules
   ],
   exports: [
-    MatButtonModule,
-    MatSidenavModule,
-    MatToolbarModule,
-    MatCardModule,
-    MatGridListModule,
-    MatListModule,
-    MatIconModule,
-    MatStepperModule,
-    MatTabsModule
+    modules
   ],
 })
 export class Material { }

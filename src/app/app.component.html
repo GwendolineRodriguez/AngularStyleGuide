@@ -1,6 +1,6 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <mat-toolbar color="primary">
-  <button mat-button>
+  <button mat-button routerLink="/home">
     {{ title }}
   </button>
 </mat-toolbar>
@@ -8,45 +8,51 @@
   <mat-drawer color="primary" mode="side" opened class="sidebar">
     <mat-vertical-stepper [linear]="isLinear" #stepper>
       <mat-step>
-        <ng-template matStepLabel>Buttons</ng-template>
+        <ng-template matStepLabel>          
+            <button mat-button routerLink="/buttons" class="col-12">Buttons</button>
+        </ng-template>
       </mat-step>
       <mat-step>
-        <ng-template matStepLabel>Table</ng-template>
+        <ng-template matStepLabel>
+            <button mat-button routerLink="/tables" class="col-12">Table</button>
+        </ng-template>
       </mat-step>
       <mat-step>
-        <ng-template matStepLabel>Logo</ng-template>
+        <ng-template matStepLabel>
+            <button mat-button routerLink="/checkbox" class="col-12">Checkbox</button>
+        </ng-template>
       </mat-step>
     </mat-vertical-stepper>
   </mat-drawer>
   <mat-drawer-content>
 
-    <div class="container fullsize">
-      <div class="row halfsize">
-        <app-buttons></app-buttons>
+    <div class="container fullsize col-12">
+      <div class="row halfsize col-12 marg-16">
+          <router-outlet></router-outlet>
       </div>
-      <div class="row halfsize">
-        <mat-card class="card-size fullsize">
-          <mat-tab-group>
+      <div class="row halfsize col-12">
+        <mat-card class="marg-16 fullsize no-marg-top">
+          <mat-tab-group class="no-marg-top">
             <mat-tab label="html">
-              <mat-card-content class="fullsize">
-                <object data="http://www.web-source.net" class="objsize">
-                  <embed src="http://www.web-source.net" class="objsize">
+              <mat-card-content class="fullsize col-12">
+                <object data="https://raw.githubusercontent.com/angular/material2/master/src/material-examples/card-fancy/card-fancy-example.html" class="objsize col-12">
+                  <embed src="https://raw.githubusercontent.com/angular/material2/master/src/material-examples/card-fancy/card-fancy-example.html" class="objsize col-12">
                   Error: Embedded data could not be displayed.
                 </object>
               </mat-card-content>
             </mat-tab>
             <mat-tab label="ts">
               <mat-card-content class="fullsize">
-                <object data="http://www.web-source.net" class="objsize">
-                  <embed src="http://www.web-source.net" class="objsize">
+                <object data="http://www.web-source.net" class="objsize col-12">
+                  <embed src="http://www.web-source.net" class="objsize col-12">
                   Error: Embedded data could not be displayed.
                 </object>
               </mat-card-content>
             </mat-tab>
             <mat-tab label="css">
-              <mat-card-content class="fullsize">
-                <object data="http://www.web-source.net" class="objsize">
-                  <embed src="http://www.web-source.net" class="objsize">
+              <mat-card-content class="fullsize col-12">
+                <object data="https://raw.githubusercontent.com/angular/material2/master/src/material-examples/card-fancy/card-fancy-example.css" class="objsize col-12">
+                  <embed src="https://raw.githubusercontent.com/angular/material2/master/src/material-examples/card-fancy/card-fancy-example.css" class="objsize col-12">
                   Error: Embedded data could not be displayed.
                 </object>
               </mat-card-content>
