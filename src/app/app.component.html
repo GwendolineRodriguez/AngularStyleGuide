@@ -27,39 +27,28 @@
       </mat-vertical-stepper>
     </mat-drawer>
 
-    <mat-drawer-content class="fullsize col-10">
+    <mat-drawer-content class="fullsize col-10 padd-top-16">
       <div class="row fullsize">
-        <div class="fullsize col-6 padd-top-16">
+        <div class="col-6">
           <router-outlet></router-outlet>
           <markdown [src]="'./assets/README.md'"></markdown>
         </div>
-        <div class="fullsize col-6 padd-bottom-16">
-          <mat-card class="fullsize">
-            <mat-tab-group class="fullsize no-padd-top">
-              <mat-tab label="html" class="fullsize">
-                <mat-card-content class="fullsize col-12">
-                  <object data="http://www.web-source.net" class="objsize col-12">
-                  </object>
+        <div class="col-6 padd-bottom-16">
+          <mat-card class="cardsize">
+            <mat-tab-group class="">
+              <mat-tab label="html" class="">
+                <mat-card-content class="col-12">
+                  <markdown [src]="'https://raw.githubusercontent.com/angular/material2/master/src/material-examples/card-fancy/card-fancy-example.html'"></markdown>
                 </mat-card-content>
               </mat-tab>
-              <mat-tab label="ts" class="fullsize">
-                <mat-card-content class="fullsize">
-                  <object data="https://raw.githubusercontent.com/angular/material2/master/src/material-examples/card-fancy/card-fancy-example.html"
-                    class="col-12">
-                    <embed src="https://raw.githubusercontent.com/angular/material2/master/src/material-examples/card-fancy/card-fancy-example.html"
-                      class="col-12">
-                    Error: Embedded data could not be displayed.
-                  </object>
+              <mat-tab label="ts" class="">
+                <mat-card-content class="">
+                  <markdown [src]="'https://raw.githubusercontent.com/angular/material2/master/src/material-examples/card-fancy/card-fancy-example.ts'"></markdown>
                 </mat-card-content>
               </mat-tab>
               <mat-tab label="css">
-                <mat-card-content class="fullsize col-12">
-                  <object data="https://raw.githubusercontent.com/angular/material2/master/src/material-examples/card-fancy/card-fancy-example.css"
-                    class="col-12">
-                    <embed src="https://raw.githubusercontent.com/angular/material2/master/src/material-examples/card-fancy/card-fancy-example.css"
-                      class="col-12">
-                    Error: Embedded data could not be displayed.
-                  </object>
+                <mat-card-content class="col-12">
+                  <markdown [src]="'https://raw.githubusercontent.com/angular/material2/master/src/material-examples/card-fancy/card-fancy-example.css'"></markdown>
                 </mat-card-content>
               </mat-tab>
             </mat-tab-group>
