@@ -4,63 +4,70 @@
     {{ title }}
   </button>
 </mat-toolbar>
-<mat-drawer-container class="fullsize">
-  <mat-drawer color="primary" mode="side" opened class="sidebar">
-    <mat-vertical-stepper [linear]="isLinear" #stepper>
-      <mat-step>
-        <ng-template matStepLabel>          
-            <button mat-button routerLink="/buttons" class="col-12">Buttons</button>
-        </ng-template>
-      </mat-step>
-      <mat-step>
-        <ng-template matStepLabel>
-            <button mat-button routerLink="/tables" class="col-12">Table</button>
-        </ng-template>
-      </mat-step>
-      <mat-step>
-        <ng-template matStepLabel>
-            <button mat-button routerLink="/checkbox" class="col-12">Checkbox</button>
-        </ng-template>
-      </mat-step>
-    </mat-vertical-stepper>
-  </mat-drawer>
-  <mat-drawer-content>
+<div class="container fullsize col-12">
+  <mat-drawer-container class="row fullsize">
 
-    <div class="container fullsize col-12">
-      <div class="row halfsize col-12 marg-16">
+    <mat-drawer mode="side" opened class="col-2">
+      <mat-vertical-stepper [linear]="isLinear" #stepper>
+        <mat-step>
+          <ng-template matStepLabel>
+            <button mat-button routerLink="/buttons" class="">Buttons</button>
+          </ng-template>
+        </mat-step>
+        <mat-step>
+          <ng-template matStepLabel>
+            <button mat-button routerLink="/tables" class="">Table</button>
+          </ng-template>
+        </mat-step>
+        <mat-step>
+          <ng-template matStepLabel>
+            <button mat-button routerLink="/checkbox" class="">Checkbox</button>
+          </ng-template>
+        </mat-step>
+      </mat-vertical-stepper>
+    </mat-drawer>
+
+    <mat-drawer-content class="fullsize col-10">
+      <div class="row fullsize">
+        <div class="fullsize col-6 padd-top-16">
           <router-outlet></router-outlet>
+        </div>
+        <div class="fullsize col-6 padd-bottom-16">
+          <mat-card class="fullsize">
+            <mat-tab-group class="fullsize no-padd-top">
+              <mat-tab label="html" class="fullsize">
+                <mat-card-content class="fullsize col-12">
+                  <object data="http://www.web-source.net" class="objsize col-12">
+                    <embed src="http://www.web-source.net" class="objsize col-12">
+                    Error: Embedded data could not be displayed.
+                  </object>
+                </mat-card-content>
+              </mat-tab>
+              <mat-tab label="ts" class="fullsize">
+                <mat-card-content class="fullsize">
+                  <object data="https://raw.githubusercontent.com/angular/material2/master/src/material-examples/card-fancy/card-fancy-example.html"
+                    class="col-12">
+                    <embed src="https://raw.githubusercontent.com/angular/material2/master/src/material-examples/card-fancy/card-fancy-example.html"
+                      class="col-12">
+                    Error: Embedded data could not be displayed.
+                  </object>
+                </mat-card-content>
+              </mat-tab>
+              <mat-tab label="css">
+                <mat-card-content class="fullsize col-12">
+                  <object data="https://raw.githubusercontent.com/angular/material2/master/src/material-examples/card-fancy/card-fancy-example.css"
+                    class="col-12">
+                    <embed src="https://raw.githubusercontent.com/angular/material2/master/src/material-examples/card-fancy/card-fancy-example.css"
+                      class="col-12">
+                    Error: Embedded data could not be displayed.
+                  </object>
+                </mat-card-content>
+              </mat-tab>
+            </mat-tab-group>
+          </mat-card>
+        </div>
       </div>
-      <div class="row halfsize col-12">
-        <mat-card class="marg-16 fullsize no-marg-top">
-          <mat-tab-group class="no-marg-top">
-            <mat-tab label="html">
-              <mat-card-content class="fullsize col-12">
-                <object data="https://raw.githubusercontent.com/angular/material2/master/src/material-examples/card-fancy/card-fancy-example.html" class="objsize col-12">
-                  <embed src="https://raw.githubusercontent.com/angular/material2/master/src/material-examples/card-fancy/card-fancy-example.html" class="objsize col-12">
-                  Error: Embedded data could not be displayed.
-                </object>
-              </mat-card-content>
-            </mat-tab>
-            <mat-tab label="ts">
-              <mat-card-content class="fullsize">
-                <object data="http://www.web-source.net" class="objsize col-12">
-                  <embed src="http://www.web-source.net" class="objsize col-12">
-                  Error: Embedded data could not be displayed.
-                </object>
-              </mat-card-content>
-            </mat-tab>
-            <mat-tab label="css">
-              <mat-card-content class="fullsize col-12">
-                <object data="https://raw.githubusercontent.com/angular/material2/master/src/material-examples/card-fancy/card-fancy-example.css" class="objsize col-12">
-                  <embed src="https://raw.githubusercontent.com/angular/material2/master/src/material-examples/card-fancy/card-fancy-example.css" class="objsize col-12">
-                  Error: Embedded data could not be displayed.
-                </object>
-              </mat-card-content>
-            </mat-tab>
-          </mat-tab-group>
-        </mat-card>
-      </div>
-    </div>
+    </mat-drawer-content>
 
-  </mat-drawer-content>
-</mat-drawer-container>
+  </mat-drawer-container>
+</div>

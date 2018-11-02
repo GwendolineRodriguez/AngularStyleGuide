@@ -3,12 +3,16 @@
     width: 20%;
 }
 
-.marg-16 {
-    margin: 16px;
+.padd-top-16 {
+    padding-top: 16px;
 }
 
-.no-marg-top {
-    margin-top: 0;
+.padd-bottom-16 {
+    padding-bottom: 16px;
+}
+
+.no-padd-top {
+    padding-top: 0;
 }
 .card-header {
     background-size: cover;
@@ -16,10 +20,6 @@
 
 .fullsize {
     height: 100%;
-}
-
-.halfsize {
-    height: 40%;
 }
 
 .objsize {
