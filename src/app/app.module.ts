@@ -7,6 +7,7 @@ import { AppRoutes } from './app.router';
 import { MarkdownModule } from 'ngx-markdown';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 
+// Components
 import { AppComponent } from './app.component';
 import { ButtonsComponent } from './components/buttons/buttons.component';
 import { TablesComponent } from './components/tables/tables.component';

@@ -1,5 +1,6 @@
 # Angular Style Guide
-This is a simple style guide to use with Angular with a html/typescript/css/markdown viewer [ngx-markdown](https://www.npmjs.com/package/ngx-markdown)
+This is a simple style guide to use with Angular with a document viewer [ngx-markdown](https://www.npmjs.com/package/ngx-markdown)
+It can read html, typescript, css, markdown and many more.
 <br/>
 <p align="center">
 <br/><br/>
@@ -22,11 +23,14 @@ Go to http:/localhost:4200
 
 Your new design directive will be a component included in the design files.
 Add your new Component in [src/app/design](./src/app/design)
+Declare it in app.router.ts and app.module.ts
+Re-build, Re-run.
 
 ## Add New Component
 
 Add your new Component in [src/app/components](./src/app/components)
-It must have a README.md explaining how to install and use your component.
+You can add a README.md explaining how to install and use your component.
+Declare it in app.router.ts and app.module.ts
 Re-build, Re-run.
 
 
