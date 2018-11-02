@@ -2,7 +2,7 @@ import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { HomeComponent } from './home/home.component';
-import { ButtonsComponent } from './buttons/buttons.component';
+import { ButtonsComponent } from './components/buttons/buttons.component';
 import { TablesComponent } from './tables/tables.component';
 import { CheckboxComponent } from './checkbox/checkbox.component';
 

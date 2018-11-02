@@ -1,9 +1,9 @@
 # Angular Style Guide
-This is a simple style guide to use with Angular
+Simple style guide to use with Angular with a html/typescript/css/markdown viewer [ngx-markdown](https://www.npmjs.com/package/ngx-markdown)
 <br/>
 <p align="center">
 <br/><br/>
-<img src="assets/angular_logo.svg" width="250">  
+<img src="app/components/angular_logo.svg" width="250">  
 <br/><br/>
 <img src="assets/screenshot1.png" width="600">
 

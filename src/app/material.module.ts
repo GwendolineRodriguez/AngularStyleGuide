@@ -10,7 +10,8 @@ import {
   MatStepperModule,
   MatTabsModule,
   MatTableModule,
-  MatCheckboxModule
+  MatCheckboxModule,
+  MatTreeModule
 } from '@angular/material';
 
 const modules = [
@@ -24,7 +25,8 @@ const modules = [
   MatStepperModule,
   MatTabsModule,
   MatTableModule,
-  MatCheckboxModule
+  MatCheckboxModule,
+  MatTreeModule
 ];
 
 @NgModule({
