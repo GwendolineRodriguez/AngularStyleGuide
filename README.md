@@ -20,8 +20,8 @@ Go to http:/localhost:4200
 
 ## Add New Design Directive
 
-Your new design directive will be a component included in the directives files.
-Add your new Component in [src/app/directives](./src/app/directives)
+Your new design directive will be a component included in the design files.
+Add your new Component in [src/app/design](./src/app/design)
 
 ## Add New Component
 
