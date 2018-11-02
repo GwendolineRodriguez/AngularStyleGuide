@@ -31,7 +31,6 @@
       <div class="row fullsize">
         <div class="col-6">
           <router-outlet></router-outlet>
-          <markdown [src]="'./assets/README.md'"></markdown>
         </div>
         <div class="col-6 padd-bottom-16">
           <mat-card class="cardsize">
@@ -55,6 +54,12 @@
           </mat-card>
         </div>
       </div>
+
+      <div class="row col-10">
+        <markdown [src]="'./assets/README.md'"></markdown>
+      </div>
+
+
     </mat-drawer-content>
 
   </mat-drawer-container>
