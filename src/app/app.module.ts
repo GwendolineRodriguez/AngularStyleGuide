@@ -9,8 +9,8 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { ButtonsComponent } from './components/buttons/buttons.component';
-import { TablesComponent } from './tables/tables.component';
-import { CheckboxComponent } from './checkbox/checkbox.component';
+import { TablesComponent } from './components/tables/tables.component';
+import { CheckboxComponent } from './components/checkbox/checkbox.component';
 import { HomeComponent } from './home/home.component';
 
 

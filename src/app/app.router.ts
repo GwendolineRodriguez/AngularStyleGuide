@@ -3,8 +3,8 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { HomeComponent } from './home/home.component';
 import { ButtonsComponent } from './components/buttons/buttons.component';
-import { TablesComponent } from './tables/tables.component';
-import { CheckboxComponent } from './checkbox/checkbox.component';
+import { TablesComponent } from './components/tables/tables.component';
+import { CheckboxComponent } from './components/checkbox/checkbox.component';
 
 export const router: Routes = [
     {
