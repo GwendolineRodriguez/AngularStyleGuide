@@ -31,6 +31,7 @@
       <div class="row fullsize">
         <div class="fullsize col-6 padd-top-16">
           <router-outlet></router-outlet>
+          <markdown [src]="'./assets/README.md'"></markdown>
         </div>
         <div class="fullsize col-6 padd-bottom-16">
           <mat-card class="fullsize">
@@ -38,8 +39,6 @@
               <mat-tab label="html" class="fullsize">
                 <mat-card-content class="fullsize col-12">
                   <object data="http://www.web-source.net" class="objsize col-12">
-                    <embed src="http://www.web-source.net" class="objsize col-12">
-                    Error: Embedded data could not be displayed.
                   </object>
                 </mat-card-content>
               </mat-tab>

@@ -1,11 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-
-import { AppRoutes } from './app.router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Material } from './material.module';
-import { from } from 'rxjs';
+import { AppRoutes } from './app.router';
+import { MarkdownModule } from 'ngx-markdown';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { ButtonsComponent } from './buttons/buttons.component';
@@ -26,7 +26,9 @@ import { HomeComponent } from './home/home.component';
     BrowserModule,
     BrowserAnimationsModule,
     Material,
-    AppRoutes
+    AppRoutes,
+    HttpClientModule,
+    MarkdownModule.forRoot({ loader: HttpClient }),
   ],
   providers: [],
   bootstrap: [AppComponent]
