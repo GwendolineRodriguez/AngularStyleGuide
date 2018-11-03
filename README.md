@@ -44,3 +44,10 @@ Re-build, Re-run.
 **Bootstrap** | [`@angular-devkit/build-angular`](https://npmjs.com/package/@angular-devkit/build-angular) | [![latest](https://img.shields.io/npm/v/%40angular-devkit%2Fbuild-angular/latest.svg)](https://npmjs.com/package/@angular-devkit/build-angular) | [![README](https://img.shields.io/badge/README--green.svg)](https://github.com/angular/angular-cli/blob/master/packages/angular_devkit/build_angular/README.md) [![snapshot](https://img.shields.io/badge/snapshot--blue.svg)](https://github.com/angular/angular-devkit-build-angular-builds)
 **Ngx Markdown** | [`ngx-markdown`](https://www.npmjs.com/package/ngx-markdown) | [![latest](https://img.shields.io/npm/v/%40angular-devkit%2Fbuild-angular/latest.svg)](https://npmjs.com/package/@angular-devkit/build-angular) | [![README](https://img.shields.io/badge/README--green.svg)](https://github.com/angular/angular-cli/blob/master/packages/angular_devkit/build_angular/README.md) [![snapshot](https://img.shields.io/badge/snapshot--blue.svg)](https://github.com/angular/angular-devkit-build-angular-builds)
 <br/><br/>
+
+
+## Road Map
+Pre-Expand list of design and component to level one only
+Create Db automatically from design and component file
+Fix styles of .scss and .ts files
+Arrange Disposition of Elements

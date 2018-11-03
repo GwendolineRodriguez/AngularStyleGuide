@@ -6,6 +6,7 @@ import { Material } from './material.module';
 import { AppRoutes } from './app.router';
 import { MarkdownModule } from 'ngx-markdown';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { FileDatabase, FileNode } from './service/filedatabase';
 
 // Components
 import { AppComponent } from './app.component';
@@ -33,7 +34,10 @@ import { ColorsComponent } from './design/colors/colors.component';
     HttpClientModule,
     MarkdownModule.forRoot({ loader: HttpClient }),
   ],
-  providers: [],
+  providers: [
+    FileDatabase,
+    FileNode,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
