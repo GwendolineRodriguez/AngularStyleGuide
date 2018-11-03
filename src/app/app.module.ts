@@ -13,6 +13,7 @@ import { ButtonsComponent } from './components/buttons/buttons.component';
 import { TablesComponent } from './components/tables/tables.component';
 import { CheckboxComponent } from './components/checkbox/checkbox.component';
 import { HomeComponent } from './home/home.component';
+import { ColorsComponent } from './design/colors/colors.component';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { HomeComponent } from './home/home.component';
     TablesComponent,
     CheckboxComponent,
     HomeComponent,
+    ColorsComponent,
   ],
   imports: [
     BrowserModule,

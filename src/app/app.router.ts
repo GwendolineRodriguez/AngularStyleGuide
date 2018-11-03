@@ -1,6 +1,10 @@
 import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
+// design components
+import { ColorsComponent } from './design/colors/colors.component';
+
+// Components
 import { HomeComponent } from './home/home.component';
 import { ButtonsComponent } from './components/buttons/buttons.component';
 import { TablesComponent } from './components/tables/tables.component';
@@ -27,6 +31,10 @@ export const router: Routes = [
     {
         path: 'checkbox',
         component: CheckboxComponent
+    },
+    {
+        path: 'colors',
+        component: ColorsComponent
     },
 ];
 
