@@ -19,9 +19,9 @@ $> ng serve
 ```
 Go to http:/localhost:4200
 
-## Add New Design Directive
+## Add New Design Guideline
 
-Your new design directive will be a component included in the design files.
+Your new design guideline will be a component included in the design files.
 Add your new Component in [src/app/design](./src/app/design)
 Declare it in app.router.ts and app.module.ts
 Re-build, Re-run.
