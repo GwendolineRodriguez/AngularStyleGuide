@@ -7,49 +7,34 @@
 <div class="container fullsize col-12">
   <mat-drawer-container class="row fullsize">
 
-    <mat-drawer mode="side" opened class="col-2">
-      <mat-tree [dataSource]="nestedDataSource" [treeControl]="nestedTreeControl" class="example-tree">
-        <mat-tree-node *matTreeNodeDef="let node" matTreeNodeToggle>
+    <mat-drawer mode="side" opened class="col-2 no-padding">
+
+      <mat-vertical-stepper #stepper>
+        <mat-step>
+          <ng-template matStepLabel>Components</ng-template>
           <li class="mat-tree-node">
-            <button mat-icon-button disabled></button>
-            {{node.filename}}: {{node.type}}
+            <button mat-button routerLink="/buttons" class="row">Buttons</button>
           </li>
-        </mat-tree-node>
-
-        <mat-nested-tree-node *matTreeNodeDef="let node; when: hasNestedChild">
-          <li>
-            <div class="mat-tree-node">
-              <button mat-icon-button matTreeNodeToggle [attr.aria-label]="'toggle ' + node.filename">
-                <mat-icon class="mat-icon-rtl-mirror">
-                  {{nestedTreeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
-                </mat-icon>
-              </button>
-              {{node.filename}}
-            </div>
-            <ul [class.example-tree-invisible]="!nestedTreeControl.isExpanded(node)">
-              <ng-container matTreeNodeOutlet></ng-container>
-            </ul>
+          <li class="mat-tree-node">
+            <button mat-button routerLink="/tables" class="row">Tables</button>
           </li>
-        </mat-nested-tree-node>
-      </mat-tree>
-
-      <mat-vertical-stepper [linear]="isLinear" #stepper>
+          <li class="mat-tree-node">
+            <button mat-button routerLink="/checkbox" class="row">Checkbox</button>
+          </li>
+        </mat-step>
         <mat-step>
-          <ng-template matStepLabel>
-            <button mat-button routerLink="/buttons" class="">Buttons</button>
-          </ng-template>
+          <ng-template matStepLabel>Design Guidelines</ng-template>
+          <button mat-button routerLink="/colors" class="">Colors</button>
         </mat-step>
         <mat-step>
           <ng-template matStepLabel>
-            <button mat-button routerLink="{{ path }}" class="">Table</button>
-          </ng-template>
-        </mat-step>
-        <mat-step>
-          <ng-template matStepLabel>
-            <button mat-button routerLink="/checkbox" class="">Checkbox</button>
+            <button mat-button routerLink="/colors" class="participate">
+              Make this Guide better
+            </button>
           </ng-template>
         </mat-step>
       </mat-vertical-stepper>
+
     </mat-drawer>
 
     <mat-drawer-content class="fullsize col-10 padd-top-16">
@@ -89,3 +74,5 @@
 
   </mat-drawer-container>
 </div>
+
+<!-- <mat-step onclick="openComponent('/buttons')"> -->

@@ -47,7 +47,6 @@ Re-build, Re-run.
 
 
 ## Road Map
-Pre-Expand list of design and component to level one only
 Create Db automatically from design and component file
 Fix styles of .scss and .ts files
 Arrange Disposition of Elements

@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, AfterViewInit, ViewChild } from '@angular/core';
 import { NestedTreeControl } from '@angular/cdk/tree';
 import { MatTreeNestedDataSource } from '@angular/material/tree';
 import { FileDatabase, FileNode } from './service/filedatabase';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -10,25 +11,27 @@ import { FileDatabase, FileNode } from './service/filedatabase';
   providers: [ FileDatabase, FileNode ]
 })
 
-export class AppComponent implements OnInit {
-  nestedTreeControl: NestedTreeControl<FileNode>;
-  nestedDataSource: MatTreeNestedDataSource<FileNode>;
-  title = 'Style Guide';
+export class AppComponent implements AfterViewInit {
+  treeControl: NestedTreeControl<FileNode>;
+  dataSource: MatTreeNestedDataSource<FileNode>;
+  title = 'Design Guidelines';
   path = '/tables';
+  @ViewChild('tree') tree;
 
-  constructor(database: FileDatabase) {
-    this.nestedTreeControl = new NestedTreeControl<FileNode>(this._getChildren);
-    this.nestedDataSource = new MatTreeNestedDataSource();
+  constructor(database: FileDatabase, private router: Router) {
+    this.treeControl = new NestedTreeControl<FileNode>(this._getChildren);
+    this.dataSource = new MatTreeNestedDataSource();
 
-    database.dataChange.subscribe(data => this.nestedDataSource.data = data);
+    database.dataChange.subscribe(data => this.dataSource.data = data);
   }
 
-  hasNestedChild = (_: number, nodeData: FileNode) => !nodeData.type;
+  hasNestedChild = (_: number, nodeData: FileNode) => !nodeData.content;
 
   private _getChildren = (node: FileNode) => node.children;
 
-  ngOnInit() {
-    // this.nestedTreeControl.expandAll();
+
+  ngAfterViewInit() {
+    this.tree.treeControl.expandAll();
   }
 
 }

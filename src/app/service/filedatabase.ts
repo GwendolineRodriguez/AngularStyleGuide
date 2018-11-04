@@ -4,37 +4,17 @@ import { BehaviorSubject } from 'rxjs';
 export class FileNode {
   children: FileNode[];
   filename: string;
-  type: any;
+  content: any;
 }
 
 const TREE_DATA = JSON.stringify({
   Design: {
     Colors: '/colors',
-    Colorscheme: 'app-colors',
   },
   Components: {
-    buttons: {
-      routerlink: '/buttons',
-      readme: 'app/components/buttons/readme.md',
-      html: 'app/components/buttons/buttons.component.html',
-      ts: 'app/components/buttons/buttons.component.ts',
-      css: 'app/components/buttons/buttons.component.scss'
-
-    },
-    checkbox: {
-      routerlink: '/checkbox',
-      readme: 'app/components/checkbox/readme.md',
-      html: 'app/components/checkbox/buttons.component.html',
-      ts: 'app/components/checkbox/buttons.component.ts',
-      css: 'app/components/checkbox/buttons.component.scss'
-    },
-    tables: {
-      routerlink: '/tables',
-      readme: 'app/components/tables/readme.md',
-      html: 'app/components/tables/buttons.component.html',
-      ts: 'app/components/tables/buttons.component.ts',
-      css: 'app/components/tables/buttons.component.scss'
-    }
+    buttons: '/buttons',
+    checkbox: '/checkbox',
+    tables: '/tables'
   },
 });
 
@@ -59,7 +39,7 @@ export class FileDatabase {
     // Notify the change.
     this.dataChange.next(data);
   }
-  buildFileTree(obj: {[key: string]: any}, level: number): FileNode[] {
+  buildFileTree(obj: { [key: string]: any }, level: number): FileNode[] {
     return Object.keys(obj).reduce<FileNode[]>((accumulator, key) => {
       const value = obj[key];
       const node = new FileNode();
@@ -69,7 +49,7 @@ export class FileDatabase {
         if (typeof value === 'object') {
           node.children = this.buildFileTree(value, level + 1);
         } else {
-          node.type = value;
+          node.content = value;
         }
       }
 
@@ -77,3 +57,32 @@ export class FileDatabase {
     }, []);
   }
 }
+
+// const TREE_DATA = JSON.stringify({
+//   Design: {
+//     Colors: { routerlink: '/colors'},
+//   },
+//   Components: {
+//     buttons: {
+//       routerlink: '/buttons',
+//       readme: 'app/components/buttons/readme.md',
+//       html: 'app/components/buttons/buttons.component.html',
+//       ts: 'app/components/buttons/buttons.component.ts',
+//       css: 'app/components/buttons/buttons.component.scss'
+//     },
+//     checkbox: {
+//       routerlink: '/checkbox',
+//       readme: 'app/components/checkbox/readme.md',
+//       html: 'app/components/checkbox/buttons.component.html',
+//       ts: 'app/components/checkbox/buttons.component.ts',
+//       css: 'app/components/checkbox/buttons.component.scss'
+//     },
+//     tables: {
+//       routerlink: '/tables',
+//       readme: 'app/components/tables/readme.md',
+//       html: 'app/components/tables/buttons.component.html',
+//       ts: 'app/components/tables/buttons.component.ts',
+//       css: 'app/components/tables/buttons.component.scss'
+//     }
+//   },
+// });
