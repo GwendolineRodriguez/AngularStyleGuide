@@ -1,4 +1,4 @@
-export class Component {
+export class CustomComponent {
     name: string;
     routerlink: string;
     readme: string;

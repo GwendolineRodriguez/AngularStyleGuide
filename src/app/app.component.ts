@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ComponentService } from './service/components.service';
+import { CustomComponent } from './models/component';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +11,7 @@ import { ComponentService } from './service/components.service';
 export class AppComponent implements OnInit {
   title = 'Design Guidelines';
 
-  components: any[];
+  components: CustomComponent[];
 
   constructor(private componentService: ComponentService) {
   }

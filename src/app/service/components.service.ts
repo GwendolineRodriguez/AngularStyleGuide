@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
-import { Component } from '../models/component';
+import { CustomComponent } from '../models/component';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ComponentService {
-  components: Component[] = [
+  components: CustomComponent[] = [
     {
       name: 'Buttons',
       routerlink: '/buttons',
@@ -33,7 +33,7 @@ export class ComponentService {
   ];
   constructor() { }
 
-  getComponents(): Component[] {
+  getComponents(): CustomComponent[] {
     return this.components;
   }
 
