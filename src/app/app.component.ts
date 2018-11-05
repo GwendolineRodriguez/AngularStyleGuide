@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ComponentService } from './service/components.service';
-import { CustomComponent } from './models/component';
+import { CustomComponent } from './models/customcomponent';
 
 @Component({
   selector: 'app-root',
@@ -12,6 +12,15 @@ export class AppComponent implements OnInit {
   title = 'Design Guidelines';
 
   components: CustomComponent[];
+  readme: 'app/components/checkbox/README.md';
+  customComponent: CustomComponent = {
+    name: 'Design Guidelines',
+    routerlink: '/home',
+    readme: 'assets/readme.md',
+    html: 'app/components/buttons/buttons.component.html',
+    ts: 'app/components/buttons/buttons.component.ts',
+    css: 'app/components/buttons/buttons.component.scss'
+  };
 
   constructor(private componentService: ComponentService) {
   }
@@ -22,6 +31,10 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     this.getComponents();
+  }
+
+  setDocuments(component) {
+    this.customComponent = component;
   }
 
 }

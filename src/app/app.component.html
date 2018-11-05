@@ -7,13 +7,16 @@
 <div class="container fullsize col-12">
   <mat-drawer-container class="row fullsize">
 
+
+
+    <!-- drawer -->
     <mat-drawer mode="side" opened class="col-2 no-padding">
 
       <mat-vertical-stepper #stepper>
         <mat-step>
           <ng-template matStepLabel>Components</ng-template>
           <li class="mat-tree-node" *ngFor="let component of components">
-            <button mat-button routerLink="{{component.routerlink}}" class="row">{{component.name}}</button>
+            <button mat-button routerLink="{{component.routerlink}}" (click)="setDocuments(component)" class="row">{{component.name}}</button>
           </li>
         </mat-step>
         <mat-step>
@@ -31,10 +34,14 @@
 
     </mat-drawer>
 
+
+
+    <!-- drawer-content -->
     <mat-drawer-content class="fullsize col-10 padd-top-16">
       <div class="row fullsize">
         <div class="col-6">
           <router-outlet></router-outlet>
+          <markdown class="col-12" [src]="'readme'"></markdown>
         </div>
         <div class="col-6 padd-bottom-16">
           <mat-card class="">
@@ -58,15 +65,11 @@
           </mat-card>
         </div>
       </div>
-
       <div class="row">
-        <markdown class="col-12" [src]="'assets/README.md'"></markdown>
+        <markdown class="col-12" [src]="readme"></markdown>
       </div>
-
 
     </mat-drawer-content>
 
   </mat-drawer-container>
 </div>
-
-<!-- <mat-step onclick="openComponent('/buttons')"> -->
