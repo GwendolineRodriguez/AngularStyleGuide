@@ -3,7 +3,7 @@ Simple style guide to use with Angular with a html/typescript/css/markdown viewe
 <br/>
 <p align="center">
 <br/><br/>
-<img src="app/components/angular_logo.svg" width="250">  
+<img src="assets/angular_logo.svg" width="250">  
 <br/><br/>
 <img src="assets/screenshot1.png" width="600">
 

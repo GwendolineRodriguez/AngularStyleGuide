@@ -12,7 +12,7 @@ export class AppComponent implements OnInit {
   title = 'Design Guidelines';
 
   components: CustomComponent[];
-  readme: 'app/components/checkbox/README.md';
+  readme = 'assets/README.md';
   customComponent: CustomComponent = {
     name: 'Design Guidelines',
     routerlink: '/home',
@@ -34,7 +34,8 @@ export class AppComponent implements OnInit {
   }
 
   setDocuments(component) {
+    console.log('here it goes !!!');
+    console.log(component);
     this.customComponent = component;
   }
-
 }

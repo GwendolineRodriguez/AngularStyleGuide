@@ -24,6 +24,7 @@ Go to http:/localhost:4200
 Your new design guideline will be a component included in the design files.
 Add your new Component in [src/app/design](./src/app/design)
 Declare it in app.router.ts and app.module.ts
+Add your files path in src/app/service/design.service.ts
 Re-build, Re-run.
 
 ## Add New Component
@@ -31,6 +32,7 @@ Re-build, Re-run.
 Add your new Component in [src/app/components](./src/app/components)
 You can add a README.md explaining how to install and use your component.
 Declare it in app.router.ts and app.module.ts
+Add your files path in src/app/service/components.service.ts
 Re-build, Re-run.
 
 
@@ -47,6 +49,6 @@ Re-build, Re-run.
 
 
 ## Road Map
-Create Db automatically from design and component file
+Being able to read a src from variable
 Fix styles of .scss and .ts files
 Arrange Disposition of Elements
