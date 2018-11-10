@@ -1,4 +1,8 @@
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { MarkdownModule } from 'ngx-markdown';
+import { CodeCardComponent } from '../code-card/code-card.component';
 import {
   MatButtonModule,
   MatSidenavModule,
@@ -15,7 +19,7 @@ import {
   MatTooltipModule
 } from '@angular/material';
 
-const modules = [
+const MaterialModule = [
   MatButtonModule,
   MatSidenavModule,
   MatToolbarModule,
@@ -33,10 +37,19 @@ const modules = [
 
 @NgModule({
   imports: [
-    modules
+    CommonModule,
+    MaterialModule,
+    HttpClientModule,
+    MarkdownModule.forRoot({ loader: HttpClient }),
+  ],
+  declarations: [
+    CodeCardComponent
   ],
   exports: [
-    modules
+    CommonModule,
+    HttpClientModule,
+    CodeCardComponent
   ],
 })
-export class Material { }
+export class SharedModule {}
+

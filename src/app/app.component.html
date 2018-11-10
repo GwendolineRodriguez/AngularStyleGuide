@@ -1,6 +1,6 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <mat-toolbar color="primary">
-  <button (click)="setComponentState(false)" mat-button routerLink="/home">
+  <button mat-button routerLink="/home">
     {{ title }}
   </button>
 </mat-toolbar>
@@ -16,16 +16,16 @@
         <mat-step>
           <ng-template matStepLabel>Components</ng-template>
           <li class="mat-tree-node" *ngFor="let component of components">
-            <button (click)="setComponentState(true)" mat-button routerLink="{{component.routerlink}}" (click)="setDocuments(component)" class="row">{{component.name}}</button>
+            <button mat-button routerLink="{{component.routerlink}}" (click)="setDocuments(component)" class="row">{{component.name}}</button>
           </li>
         </mat-step>
         <mat-step>
           <ng-template matStepLabel>Design Guidelines</ng-template>
-          <button (click)="setComponentState(false)" mat-button routerLink="/colors" class="">Colors</button>
+          <button mat-button routerLink="/colors" class="">Colors</button>
         </mat-step>
         <mat-step>
           <ng-template matStepLabel>
-            <button (click)="setComponentState(false)" mat-button routerLink="/home" class="participate">
+            <button mat-button routerLink="/home" class="participate">
               Make this Guide better
             </button>
           </ng-template>
@@ -37,16 +37,9 @@
 
     <!-- drawer-content -->
     <mat-drawer-content class="fullsize col-10 padd-top-16">
-      <router-outlet *ngIf="!isComponent"></router-outlet>
-      <div *ngIf="isComponent" class="row fullsize">
-        <div class="col-6">
-          <markdown class="col-12" [src]="customComponent.readme"></markdown>
-        </div>
-        <div class="col-6">
-          <app-code-card [customComponent]="customComponent"></app-code-card>
-        </div>
-      </div>
-
+      <router-outlet></router-outlet>
+      <!-- <router-outlet [customComponent]="customComponent"></router-outlet> -->
+      <!-- <app-doc-viewer ></app-doc-viewer> -->
     </mat-drawer-content>
 
   </mat-drawer-container>

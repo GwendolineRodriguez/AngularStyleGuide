@@ -5,6 +5,7 @@ import { CustomComponent } from '../models/customcomponent';
   providedIn: 'root',
 })
 export class ComponentService {
+  currentComponent: CustomComponent;
   components: CustomComponent[] = [
     {
       name: 'Buttons',
@@ -35,6 +36,11 @@ export class ComponentService {
 
   getComponents(): CustomComponent[] {
     return this.components;
+  }
+
+  getCurrentComponent() {
+    this.currentComponent = this.components[0];
+    return this.currentComponent;
   }
 
   createComponents() {
