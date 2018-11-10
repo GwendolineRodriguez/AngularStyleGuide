@@ -49,6 +49,6 @@ Re-build, Re-run.
 
 
 ## Road Map
-Being able to read a src from variable
-Fix styles of .scss and .ts files
-Arrange Disposition of Elements
+Fix styles of .scss and .ts files (how to refresh view between tabs?)
+Fix show codetabs on refresh
+add animations

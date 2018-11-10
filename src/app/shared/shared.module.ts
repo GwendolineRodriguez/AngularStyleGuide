@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { MarkdownModule } from 'ngx-markdown';
-import { CodeCardComponent } from '../code-card/code-card.component';
 import {
   MatButtonModule,
   MatSidenavModule,
@@ -43,12 +42,11 @@ const MaterialModule = [
     MarkdownModule.forRoot({ loader: HttpClient }),
   ],
   declarations: [
-    CodeCardComponent
   ],
   exports: [
     CommonModule,
+    MaterialModule,
     HttpClientModule,
-    CodeCardComponent
   ],
 })
 export class SharedModule {}

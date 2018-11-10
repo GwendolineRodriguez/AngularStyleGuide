@@ -9,12 +9,12 @@ const routes: Routes = [
     component: DocViewerComponent,
     children: [
       {
-        path: '/',
-        redirectTo: 'buttons',
+        path: '',
+        redirectTo: '/buttons',
         pathMatch: 'full'
       },
       {
-        path: 'buttons',
+        path: '/buttons',
         component: ButtonsComponent
       }
     ]

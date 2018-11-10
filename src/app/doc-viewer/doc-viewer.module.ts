@@ -19,6 +19,7 @@ import { DocViewerRoutingModule } from './doc-viewer-routing.module';
     DocViewerComponent,
   ],
   exports: [
+
   ]
 })
 export class DocViewerModule { }
