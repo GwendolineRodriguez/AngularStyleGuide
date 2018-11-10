@@ -15,6 +15,7 @@ import { TablesComponent } from './components/tables/tables.component';
 import { CheckboxComponent } from './components/checkbox/checkbox.component';
 import { HomeComponent } from './home/home.component';
 import { ColorsComponent } from './design/colors/colors.component';
+import { CodeCardComponent } from './code-card/code-card.component';
 
 
 @NgModule({
@@ -25,6 +26,7 @@ import { ColorsComponent } from './design/colors/colors.component';
     CheckboxComponent,
     HomeComponent,
     ColorsComponent,
+    CodeCardComponent,
   ],
   imports: [
     BrowserModule,

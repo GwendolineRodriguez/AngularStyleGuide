@@ -35,34 +35,14 @@
     </mat-drawer>
 
 
-
     <!-- drawer-content -->
     <mat-drawer-content class="fullsize col-10 padd-top-16">
       <div class="row fullsize">
         <div class="col-6">
-          <router-outlet></router-outlet>
           <markdown class="col-12" [src]="customComponent.readme"></markdown>
         </div>
-        <div class="col-6 padd-bottom-16">
-          <mat-card class="">
-            <mat-tab-group class="">
-              <mat-tab label="html" class="">
-                <mat-card-content class="col-12">
-                  <markdown [src]="customComponent.html"></markdown>
-                </mat-card-content>
-              </mat-tab>
-              <mat-tab label="ts" class="">
-                <mat-card-content class="">
-                  <markdown [src]="customComponent.ts"></markdown>
-                </mat-card-content>
-              </mat-tab>
-              <mat-tab label="css">
-                <mat-card-content class="col-12">
-                  <markdown [src]="customComponent.css"></markdown>
-                </mat-card-content>
-              </mat-tab>
-            </mat-tab-group>
-          </mat-card>
+        <div class="col-6">
+          <app-code-card [customComponent]="customComponent"></app-code-card>
         </div>
       </div>
 

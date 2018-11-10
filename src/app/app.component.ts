@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { ComponentService } from './service/components.service';
 import { CustomComponent } from './models/customcomponent';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -9,20 +10,20 @@ import { CustomComponent } from './models/customcomponent';
 })
 
 export class AppComponent implements OnInit {
-  title = 'Design Guidelines';
-
+  title = 'Style Guide';
   components: CustomComponent[];
   readme = 'assets/README.md';
-  customComponent: CustomComponent = {
-    name: 'Design Guidelines',
+  defaultComponent: CustomComponent = {
+    name: 'Style Guide',
     routerlink: '/home',
-    readme: 'assets/readme.md',
+    readme: 'assets/README.md',
     html: 'app/components/buttons/buttons.component.html',
     ts: 'app/components/buttons/buttons.component.ts',
     css: 'app/components/buttons/buttons.component.scss'
   };
+  customComponent: CustomComponent;
 
-  constructor(private componentService: ComponentService) {
+  constructor(private componentService: ComponentService, private router: Router) {
   }
 
   getComponents() {
@@ -30,11 +31,11 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.customComponent = this.defaultComponent;
     this.getComponents();
   }
 
   setDocuments(component) {
-    console.log('here it goes !!!');
     console.log(component);
     this.customComponent = component;
   }
