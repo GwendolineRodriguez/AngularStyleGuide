@@ -4,7 +4,7 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { MarkdownModule } from 'ngx-markdown';
 import { SharedModule } from '../shared/shared.module';
 
-import { DocViewerComponent } from './doc-viewer-list/doc-viewer.component';
+import { DocViewerComponent } from './doc-viewer/doc-viewer.component';
 import { DocViewerRoutingModule } from './doc-viewer-routing.module';
 
 @NgModule({

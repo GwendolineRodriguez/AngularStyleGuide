@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { DocViewerComponent } from './doc-viewer-list/doc-viewer.component';
-import { ButtonsComponent } from '../components/buttons/buttons.component';
+import { DocViewerComponent } from './doc-viewer/doc-viewer.component';
+import { ButtonsComponent } from './components/buttons/buttons.component';
 
 const routes: Routes = [
   {
@@ -10,11 +10,11 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        redirectTo: '/buttons',
+        redirectTo: 'buttons',
         pathMatch: 'full'
       },
       {
-        path: '/buttons',
+        path: 'buttons',
         component: ButtonsComponent
       }
     ]

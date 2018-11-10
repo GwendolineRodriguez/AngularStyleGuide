@@ -34,6 +34,11 @@ const MaterialModule = [
   MatTooltipModule
 ];
 
+// Components
+import { ButtonsComponent } from '../doc-viewer/components/buttons/buttons.component';
+import { TablesComponent } from '../doc-viewer/components/tables/tables.component';
+import { CheckboxComponent } from '../doc-viewer/components/checkbox/checkbox.component';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -42,11 +47,18 @@ const MaterialModule = [
     MarkdownModule.forRoot({ loader: HttpClient }),
   ],
   declarations: [
+    ButtonsComponent,
+    TablesComponent,
+    CheckboxComponent
   ],
   exports: [
     CommonModule,
     MaterialModule,
     HttpClientModule,
+
+    ButtonsComponent,
+    TablesComponent,
+    CheckboxComponent
   ],
 })
 export class SharedModule {}

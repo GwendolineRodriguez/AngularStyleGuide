@@ -6,9 +6,10 @@ import { ColorsComponent } from './design/colors/colors.component';
 
 // Components
 import { HomeComponent } from './home/home.component';
-import { ButtonsComponent } from './components/buttons/buttons.component';
-import { TablesComponent } from './components/tables/tables.component';
-import { CheckboxComponent } from './components/checkbox/checkbox.component';
+import { ButtonsComponent } from './doc-viewer/components/buttons/buttons.component';
+import { TablesComponent } from './doc-viewer/components/tables/tables.component';
+import { CheckboxComponent } from './doc-viewer/components/checkbox/checkbox.component';
+import { DocViewerModule } from './doc-viewer/doc-viewer.module';
 
 const routes: Routes = [
     {
@@ -22,8 +23,7 @@ const routes: Routes = [
     },
     {
         path: 'buttons',
-        pathMatch: 'full',
-        loadChildren: './doc-viewer/doc-viewer.module#DocViewerModule'
+        loadChildren: () => DocViewerModule
     },
     {
         path: 'tables',
