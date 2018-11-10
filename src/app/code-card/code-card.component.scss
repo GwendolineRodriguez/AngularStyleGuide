@@ -1,12 +1,33 @@
-::ng-deep .mat-card-header-text {
-  /* CSS styles go here */
-  margin: 0px; // for example to remove the margin
-}
-
 .card {
   position: fixed;
+  margin-left: 20px;
+  width: 39%;
 }
 
-.card-header {
-  background-color: blue;
+.mat-card-header {
+  border-radius: 3px 3px 0px 0px;
+  padding: 0px;
+  color: white;
+  background: #3f51b5;
+}
+
+.mat-card-content {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.mat-card-title {
+  margin-top: 7px;
+  font-size: 14px;
+  height: 30px;
+  margin-bottom: 0 !important;
+}
+
+.mat-card {
+  padding: 0px;
+}
+
+.code-icon {
+  padding-top: 5px;
+  margin-right: 10px;
 }

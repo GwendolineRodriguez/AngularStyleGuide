@@ -1,8 +1,8 @@
-<mat-card class="card col-12">
-  <mat-card-header color="primary" class="card-header">
-    <mat-card-title>Example</mat-card-title>
+<mat-card class="card">
+  <mat-card-header color="primary">
+    <mat-card-title color="primary">Example</mat-card-title>
     <span class="spacer"></span>
-    <mat-icon class="code-icon" (click)="showCode()">code</mat-icon>
+    <mat-icon class="code-icon" matTooltip="View source" (click)="showCode()">code</mat-icon>
   </mat-card-header>
   <mat-tab-group *ngIf="show" #tabGroup (selectedTabChange)="onTabChanged()">
     <mat-tab label="html">

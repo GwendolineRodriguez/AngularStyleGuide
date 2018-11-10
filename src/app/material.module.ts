@@ -11,7 +11,8 @@ import {
   MatTabsModule,
   MatTableModule,
   MatCheckboxModule,
-  MatTreeModule
+  MatTreeModule,
+  MatTooltipModule
 } from '@angular/material';
 
 const modules = [
@@ -26,7 +27,8 @@ const modules = [
   MatTabsModule,
   MatTableModule,
   MatCheckboxModule,
-  MatTreeModule
+  MatTreeModule,
+  MatTooltipModule
 ];
 
 @NgModule({
