@@ -1,4 +1,4 @@
-import { ModuleWithProviders } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 // design components
@@ -10,7 +10,7 @@ import { ButtonsComponent } from './components/buttons/buttons.component';
 import { TablesComponent } from './components/tables/tables.component';
 import { CheckboxComponent } from './components/checkbox/checkbox.component';
 
-export const router: Routes = [
+const routes: Routes = [
     {
         path: '',
         redirectTo: '/home',
@@ -38,4 +38,9 @@ export const router: Routes = [
     },
 ];
 
-export const AppRoutes: ModuleWithProviders = RouterModule.forRoot(router);
+@NgModule({
+    imports: [RouterModule.forRoot(routes)],
+    exports: [RouterModule]
+})
+
+export class AppRoutes {}
