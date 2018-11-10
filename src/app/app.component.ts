@@ -22,6 +22,7 @@ export class AppComponent implements OnInit {
     css: 'app/components/buttons/buttons.component.scss'
   };
   customComponent: CustomComponent;
+  isComponent = false;
 
   constructor(private componentService: ComponentService, private router: Router) {
   }
@@ -38,5 +39,9 @@ export class AppComponent implements OnInit {
   setDocuments(component) {
     console.log(component);
     this.customComponent = component;
+  }
+
+  setComponentState(state) {
+    this.isComponent = state;
   }
 }
