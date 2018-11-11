@@ -6,7 +6,6 @@ It can read html, typescript, css, markdown and many more.
 <br/><br/>
 <img src="src/assets/angular_logo.svg" width="250">  
 <img src="src/assets/screenshot1.png" width="600">
-
 </p>
 <br/>
 
