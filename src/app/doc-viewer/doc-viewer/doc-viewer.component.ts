@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { CustomComponent } from '../../models/customcomponent';
 import { ComponentService } from '../../service/components.service';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-doc-viewer',
   templateUrl: './doc-viewer.component.html',
@@ -12,10 +12,12 @@ export class DocViewerComponent implements OnInit {
   customComponent: CustomComponent;
   show = false;
 
-  constructor(private componentService: ComponentService) { }
+  constructor(private componentService: ComponentService,
+    private router: Router) { }
 
   ngOnInit() {
     this.customComponent = this.componentService.getCurrentComponent();
+    this.router.navigate([this.customComponent.routerlink]);
   }
 
   onTabChanged() {
