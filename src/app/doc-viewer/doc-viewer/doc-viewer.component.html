@@ -9,19 +9,19 @@
         <span class="spacer"></span>
         <mat-icon class="code-icon" matTooltip="View source" (click)="showCode()">code</mat-icon>
       </mat-card-header>
-      <mat-tab-group *ngIf="show" #tabGroup (selectedTabChange)="onTabChanged()">
+      <mat-tab-group *ngIf="show" #matTabs (selectedTabChange)="onTabChanged()">
         <mat-tab label="html">
           <mat-card-content class="col-12">
             <markdown [src]="customComponent.html"></markdown>
           </mat-card-content>
         </mat-tab>
         <mat-tab label="ts">
-          <mat-card-content class="col-12">
+          <mat-card-content class="col-12" *ngIf="showts">
             <markdown [src]="customComponent.ts"></markdown>
           </mat-card-content>
         </mat-tab>
         <mat-tab label="css">
-          <mat-card-content class="col-12">
+          <mat-card-content class="col-12" *ngIf="showcss">
             <markdown [src]="customComponent.css"></markdown>
           </mat-card-content>
         </mat-tab>

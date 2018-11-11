@@ -2,15 +2,20 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { CustomComponent } from '../../service/component/customcomponent.model';
 import { ComponentService } from '../../service/component/components.service';
 import { Router } from '@angular/router';
+import { MatTabGroup } from '@angular/material';
+
+
 @Component({
   selector: 'app-doc-viewer',
   templateUrl: './doc-viewer.component.html',
   styleUrls: ['./doc-viewer.component.scss']
 })
 export class DocViewerComponent implements OnInit {
-  @ViewChild('tabGroup') tabGroup;
+  @ViewChild('matTabs') matTabs: MatTabGroup;
   customComponent: CustomComponent;
   show = false;
+  showts = false;
+  showcss = false;
 
   constructor(private componentService: ComponentService,
     private router: Router) { }
@@ -26,6 +31,11 @@ export class DocViewerComponent implements OnInit {
   }
 
   onTabChanged() {
+    if (this.matTabs.selectedIndex === 1) {
+      this.showts = true;
+    } else if (this.matTabs.selectedIndex === 2) {
+      this.showcss = true;
+    }
   }
 
   showCode() {

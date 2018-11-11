@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { MarkdownModule } from 'ngx-markdown';
 import { SharedModule } from '../shared/shared.module';
 
@@ -13,7 +13,7 @@ import { DocViewerRoutingModule } from './doc-viewer-routing.module';
     DocViewerRoutingModule,
     HttpClientModule,
     SharedModule,
-    MarkdownModule.forRoot({ loader: HttpClient }),
+    MarkdownModule.forChild(),
   ],
   declarations: [
     DocViewerComponent,
