@@ -29,7 +29,7 @@ Go to http:/localhost:4200
 
 - Add your new Component in [src/app/components](./src/app/doc-viewer/components)
 - You can add a README.md explaining how to install and use your component.
-- Declare it in app/doc-viewer/doc-viewer-routing.module.ts and app/sharedshared.module.ts following the existing components way. Be carefull between imports/exports/declarations.
-- Add your files path in src/app/service/component/components.service.ts
+- Declare it in [src/app/doc-viewer/doc-viewer-routing.module.ts](./src/app/doc-viewer/doc-viewer-routing.module.ts) and [src/app/sharedshared.module.ts](./src/app/sharedshared.module.ts) following the existing components way. Be carefull between imports/exports/declarations.
+- Add your files path in [src/app/service/component/components.service.ts](./src/app/service/component/components.service.ts)
 - Re-build, Re-run.
 
