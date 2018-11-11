@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { ComponentService } from './service/components.service';
-import { CustomComponent } from './models/customcomponent';
+import { ComponentService } from './service/component/components.service';
+import { CustomComponent } from './service/component/customcomponent.model';
 import { Router } from '@angular/router';
 
 @Component({

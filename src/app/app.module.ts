@@ -7,7 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { DocViewerModule } from './doc-viewer/doc-viewer.module';
 import { MarkdownModule } from 'ngx-markdown';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
-import { ComponentService } from './service/components.service';
+import { ComponentService } from './service/component/components.service';
 
 // Components
 import { AppComponent } from './app.component';

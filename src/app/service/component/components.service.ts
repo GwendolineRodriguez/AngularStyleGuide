@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { CustomComponent } from '../models/customcomponent';
+import { CustomComponent } from './customcomponent.model';
 
 @Injectable({
   providedIn: 'root',
