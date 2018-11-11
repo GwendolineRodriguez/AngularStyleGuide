@@ -4,8 +4,8 @@ It can read html, typescript, css, markdown and many more.
 <br/>
 <p align="center">
 <br/><br/>
-<img src="assets/angular_logo.svg" width="250">  
-<img src="assets/screenshot1.png" width="600">
+<img src="src/assets/angular_logo.svg" width="250">  
+<img src="src/assets/screenshot1.png" width="600">
 
 </p>
 <br/>
@@ -20,16 +20,16 @@ Go to http:/localhost:4200
 
 ## Add New Design Guideline
 
-Your new design guideline will be a component included in the design files.
-Add your new Component in [src/app/design](./src/app/design)
-Declare it in app.router.ts and app.module.ts
-Re-build, Re-run.
+- Your new design guideline will be a component included in the design files.  
+- Add your new Component in [src/app/design](./src/app/design)  
+- Declare it in app.router.ts and app.module.ts  
+- Re-build, Re-run.  
 
 ## Add New Component
 
-Add your new Component in [src/app/components](./src/app/doc-viewer/components)
-You can add a README.md explaining how to install and use your component.
-Declare it in app/doc-viewer/doc-viewer-routing.module.ts and app/sharedshared.module.ts following the existing components way. Be carefull between imports/exports/declarations. 
-Add your files path in src/app/service/component/components.service.ts
-Re-build, Re-run.  
+- Add your new Component in [src/app/components](./src/app/doc-viewer/components)
+- You can add a README.md explaining how to install and use your component.
+- Declare it in app/doc-viewer/doc-viewer-routing.module.ts and app/sharedshared.module.ts following the existing components way. Be carefull between imports/exports/declarations.
+- Add your files path in src/app/service/component/components.service.ts
+- Re-build, Re-run.
 
