@@ -17,6 +17,11 @@ export class DocViewerComponent implements OnInit {
 
   ngOnInit() {
     this.customComponent = this.componentService.getCurrentComponent();
+    if (this.customComponent === undefined) {
+      this.customComponent = JSON.parse(localStorage.getItem('customComponent'));
+    } else {
+      localStorage.setItem('customComponent', JSON.stringify(this.customComponent));
+    }
     this.router.navigate([this.customComponent.routerlink]);
   }
 

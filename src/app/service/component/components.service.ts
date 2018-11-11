@@ -39,9 +39,6 @@ export class ComponentService {
   }
 
   getCurrentComponent() {
-    if (this.currentComponent === null) {
-      this.currentComponent = this.components[0];
-    }
     return this.currentComponent;
   }
 
