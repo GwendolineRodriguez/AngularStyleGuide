@@ -19,7 +19,6 @@ export class DocViewerComponent implements OnInit {
   }
 
   onTabChanged() {
-    console.log('yalaaa');
   }
 
   showCode() {

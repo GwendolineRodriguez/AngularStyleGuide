@@ -1,4 +1,4 @@
-# Buttons
+# Button
 
 Angular Material buttons are native `<button>` or `<a>` elements enhanced with Material Design styling and ink ripples.
 

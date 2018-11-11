@@ -35,8 +35,8 @@ const MaterialModule = [
 ];
 
 // Components
-import { ButtonsComponent } from '../doc-viewer/components/buttons/buttons.component';
-import { TablesComponent } from '../doc-viewer/components/tables/tables.component';
+import { ButtonComponent } from '../doc-viewer/components/button/button.component';
+import { TableComponent } from '../doc-viewer/components/table/table.component';
 import { CheckboxComponent } from '../doc-viewer/components/checkbox/checkbox.component';
 
 @NgModule({
@@ -47,8 +47,8 @@ import { CheckboxComponent } from '../doc-viewer/components/checkbox/checkbox.co
     MarkdownModule.forRoot({ loader: HttpClient }),
   ],
   declarations: [
-    ButtonsComponent,
-    TablesComponent,
+    ButtonComponent,
+    TableComponent,
     CheckboxComponent
   ],
   exports: [
@@ -56,8 +56,8 @@ import { CheckboxComponent } from '../doc-viewer/components/checkbox/checkbox.co
     MaterialModule,
     HttpClientModule,
 
-    ButtonsComponent,
-    TablesComponent,
+    ButtonComponent,
+    TableComponent,
     CheckboxComponent
   ],
 })

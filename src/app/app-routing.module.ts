@@ -6,9 +6,6 @@ import { ColorsComponent } from './design/colors/colors.component';
 
 // Components
 import { HomeComponent } from './home/home.component';
-import { ButtonsComponent } from './doc-viewer/components/buttons/buttons.component';
-import { TablesComponent } from './doc-viewer/components/tables/tables.component';
-import { CheckboxComponent } from './doc-viewer/components/checkbox/checkbox.component';
 import { DocViewerModule } from './doc-viewer/doc-viewer.module';
 
 const routes: Routes = [
@@ -22,16 +19,8 @@ const routes: Routes = [
         component: HomeComponent
     },
     {
-        path: 'buttons',
+        path: 'component',
         loadChildren: () => DocViewerModule
-    },
-    {
-        path: 'tables',
-        component: TablesComponent
-    },
-    {
-        path: 'checkbox',
-        component: CheckboxComponent
     },
     {
         path: 'colors',

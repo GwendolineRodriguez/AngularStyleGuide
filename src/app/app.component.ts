@@ -13,30 +13,19 @@ export class AppComponent implements OnInit {
   title = 'Style Guide';
   components: CustomComponent[];
   readme = 'assets/README.md';
-  defaultComponent: CustomComponent = {
-    name: 'Style Guide',
-    routerlink: '/home',
-    readme: 'assets/README.md',
-    html: 'app/components/buttons/buttons.component.html',
-    ts: 'app/components/buttons/buttons.component.ts',
-    css: 'app/components/buttons/buttons.component.scss'
-  };
   customComponent: CustomComponent;
 
   constructor(private componentService: ComponentService, private router: Router) {
   }
 
-  getComponents() {
-    this.components = this.componentService.getComponents();
-  }
-
   ngOnInit() {
-    this.customComponent = this.defaultComponent;
-    this.getComponents();
+    this.components = this.componentService.getComponents();
+    this.customComponent = this.componentService.getCurrentComponent();
   }
 
   setDocuments(component) {
     console.log(component);
-    this.customComponent = component;
+    this.componentService.setCurrentComponent(component);
+    this.customComponent = this.componentService.getCurrentComponent();
   }
 }

@@ -49,6 +49,6 @@ Re-build, Re-run.
 
 
 ## Road Map
+change router-link on load of doc-viewer
 Fix styles of .scss and .ts files (how to refresh view between tabs?)
-Fix show codetabs on refresh
 add animations

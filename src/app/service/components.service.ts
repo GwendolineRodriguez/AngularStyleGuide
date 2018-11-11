@@ -8,12 +8,12 @@ export class ComponentService {
   currentComponent: CustomComponent;
   components: CustomComponent[] = [
     {
-      name: 'Buttons',
-      routerlink: '/buttons',
-      readme: 'app/doc-viewer/components/buttons/README.md',
-      html: 'app/doc-viewer/components/buttons/buttons.component.html',
-      ts: 'app/doc-viewer/components/buttons/buttons.component.ts',
-      css: 'app/doc-viewer/components/buttons/buttons.component.scss'
+      name: 'Button',
+      routerlink: '/button',
+      readme: 'app/doc-viewer/components/button/README.md',
+      html: 'app/doc-viewer/components/button/button.component.html',
+      ts: 'app/doc-viewer/components/button/button.component.ts',
+      css: 'app/doc-viewer/components/button/button.component.scss'
     },
     {
       name: 'Checkbox',
@@ -24,12 +24,12 @@ export class ComponentService {
       css: 'app/doc-viewer/components/checkbox/checkbox.component.scss'
     },
     {
-      name: 'Tables',
-      routerlink: '/tables',
-      readme: 'app/doc-viewer/components/tables/README.md',
-      html: 'app/doc-viewer/components/tables/tables.component.html',
-      ts: 'app/doc-viewer/components/tables/tables.component.ts',
-      css: 'app/doc-viewer/components/tables/tables.component.scss'
+      name: 'Table',
+      routerlink: '/table',
+      readme: 'app/doc-viewer/components/table/README.md',
+      html: 'app/doc-viewer/components/table/table.component.html',
+      ts: 'app/doc-viewer/components/table/table.component.ts',
+      css: 'app/doc-viewer/components/table/table.component.scss'
     }
   ];
   constructor() { }
@@ -39,8 +39,14 @@ export class ComponentService {
   }
 
   getCurrentComponent() {
-    this.currentComponent = this.components[0];
+    if (this.currentComponent === null) {
+      this.currentComponent = this.components[0];
+    }
     return this.currentComponent;
+  }
+
+  setCurrentComponent(component) {
+    this.currentComponent = component;
   }
 
   createComponents() {

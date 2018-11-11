@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { DocViewerComponent } from './doc-viewer/doc-viewer.component';
-import { ButtonsComponent } from './components/buttons/buttons.component';
+import { ButtonComponent } from './components/button/button.component';
+import { TableComponent } from './components/table/table.component';
+import { CheckboxComponent } from './components/checkbox/checkbox.component';
 
 const routes: Routes = [
   {
@@ -10,13 +12,21 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        redirectTo: 'buttons',
+        redirectTo: 'button',
         pathMatch: 'full'
       },
       {
-        path: 'buttons',
-        component: ButtonsComponent
-      }
+        path: 'button',
+        component: ButtonComponent
+      },
+      {
+        path: 'table',
+        component: TableComponent
+    },
+    {
+        path: 'checkbox',
+        component: CheckboxComponent
+    },
     ]
   }
 ];
